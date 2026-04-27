@@ -39,8 +39,6 @@ const AddPlant = () => {
       image: formData.get("image"),
     };
 
-    console.log("New Plant:", newPlant);
-
     // Reset the form
     e.target.reset();
 
