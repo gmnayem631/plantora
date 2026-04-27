@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Plantora",
-  description: "Showcase and manage your indoor plants",
+  description: "Showcase and manage your indoor plant collection",
 };
 
 export default function RootLayout({ children }) {
@@ -22,7 +23,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {" "}
+        <Header></Header>
+        {children}
+      </body>
     </html>
   );
 }
