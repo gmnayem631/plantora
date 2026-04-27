@@ -6,7 +6,7 @@ import { useState } from "react";
 import logo from "../../public/logo.png";
 import Image from "next/image";
 
-export default function Header() {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
@@ -111,4 +111,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
