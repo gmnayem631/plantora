@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaLeaf, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 import logo from "../../public/logo.png";
 import Image from "next/image";
