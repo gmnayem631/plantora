@@ -50,7 +50,7 @@ const PlantCard = ({ plant }) => {
         </div>
 
         <Link
-          href={`/items/${plant.id}`}
+          href={`/plants/${plant.id}`}
           className="mt-1 w-full text-center text-sm font-semibold text-white bg-green-600 hover:bg-green-500 px-4 py-2.5 cursor-pointer rounded-full transition-colors duration-200"
         >
           View Details
