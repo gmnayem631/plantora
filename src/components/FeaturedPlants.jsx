@@ -29,7 +29,7 @@ const FeaturedPlants = () => {
           {featured.map((plant) => (
             <Link
               key={plant.id}
-              href={`/items/${plant.id}`}
+              href={`/plants/${plant.id}`}
               className="group rounded-2xl overflow-hidden border border-green-100 hover:border-green-300 hover:shadow-lg transition-all duration-300"
             >
               {/* Image */}
@@ -76,7 +76,7 @@ const FeaturedPlants = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
-            href="/items"
+            href="/plants"
             className="inline-block px-8 py-3 border border-green-400 text-green-700 hover:bg-green-600 hover:text-white text-sm font-semibold rounded-full transition-all duration-200"
           >
             View All Plants

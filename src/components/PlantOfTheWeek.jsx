@@ -67,7 +67,7 @@ const PlantOfTheWeek = () => {
             </div>
 
             <Link
-              href={`/items/${plant.id}`}
+              href={`/plants/${plant.id}`}
               className="inline-block mt-2 px-8 py-3 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold rounded-full transition-colors duration-200 text-center"
             >
               View Plant Details

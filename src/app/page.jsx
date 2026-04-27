@@ -6,12 +6,12 @@ import WhyPlantora from "@/components/WhyPlantora";
 
 export default function Home() {
   return (
-    <main className="">
+    <section className="">
       <Hero></Hero>
       <FeaturedPlants></FeaturedPlants>
       <WhyPlantora></WhyPlantora>
       <CareLevelGuide></CareLevelGuide>
       <PlantOfTheWeek></PlantOfTheWeek>
-    </main>
+    </section>
   );
 }

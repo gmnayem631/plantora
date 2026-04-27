@@ -33,7 +33,7 @@ const Hero = () => {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
           <Link
-            href="/items"
+            href="/plants"
             className="px-8 py-3.5 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold rounded-full transition-colors duration-200 shadow-sm"
           >
             Explore Plants
