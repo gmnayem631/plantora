@@ -12,7 +12,7 @@ const PlantOfTheWeek = () => {
         background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)",
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest text-green-500 uppercase">

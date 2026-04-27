@@ -39,7 +39,7 @@ const Items = () => {
       className="min-h-screen px-6 py-16"
       style={{ background: "linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%)" }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-12">
           <span className="text-xs font-semibold tracking-widest text-green-500 uppercase">

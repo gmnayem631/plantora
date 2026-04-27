@@ -7,7 +7,7 @@ const FeaturedPlants = () => {
 
   return (
     <section className="py-24 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest text-green-500 uppercase">

@@ -58,7 +58,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 border border-green-200 rounded-full px-3 py-2 hover:bg-green-50 transition-colors duration-200"
+                className="flex items-center gap-2 border cursor-pointer border-green-200 rounded-full px-3 py-2 hover:bg-green-50 transition-colors duration-200"
               >
                 <FiUser size={16} className="text-green-600" />
                 {/* Show the part of the email before the @ sign */}
@@ -95,7 +95,7 @@ const Header = () => {
                       Add Plant
                     </Link>
                     <Link
-                      href="/plants/manage"
+                      href="/plants/manage-plants"
                       onClick={() => setDropdownOpen(false)}
                       className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700 transition-colors duration-150"
                     >
@@ -111,7 +111,7 @@ const Header = () => {
                         logout();
                         setDropdownOpen(false);
                       }}
-                      className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 transition-colors duration-150"
+                      className="flex items-center gap-3 w-full px-4 py-2.5 cursor-pointer text-sm text-red-500 hover:bg-red-50 transition-colors duration-150"
                     >
                       <MdOutlineLogout size={16} />
                       Logout

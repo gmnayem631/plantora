@@ -35,7 +35,7 @@ const WhyPlantora = () => {
         background: "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)",
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-11/12 mx-auto">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest text-green-500 uppercase">
             Why Choose Us
@@ -55,7 +55,7 @@ const WhyPlantora = () => {
           {features.map((f) => (
             <div
               key={f.title}
-              className="bg-white rounded-2xl p-6 border border-green-100 hover:border-green-300 hover:shadow-md transition-all duration-300 flex flex-col gap-3"
+              className="bg-gray-50 shadow-sm rounded-2xl p-6 border border-green-100 hover:border-green-300 hover:shadow-md transition-all duration-300 flex flex-col gap-3"
             >
               <span className="text-3xl text-green-600">{f.icon}</span>
 
