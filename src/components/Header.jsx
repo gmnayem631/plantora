@@ -24,7 +24,7 @@ const Header = () => {
           <Image src={logo} alt="Plantora logo" width={32} height={32} />
           <span
             className="text-xl font-bold tracking-tight text-green-700 group-hover:text-green-500 transition-colors duration-200"
-            style={{ fontFamily: "Georgia, serif" }}
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Plantora
           </span>

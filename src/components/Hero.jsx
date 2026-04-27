@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="min-h-[85vh] flex items-center justify-center px-6"
+      className="min-h-[90vh] flex items-center justify-center px-6"
       style={{
         background:
           "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 40%, #f7fee7 100%)",
@@ -19,14 +19,14 @@ const Hero = () => {
         {/* Headline */}
         <h1
           className="text-5xl md:text-7xl font-bold text-green-900 leading-tight"
-          style={{ fontFamily: "Georgia, serif" }}
+          style={{ fontFamily: "var(--font-serif)" }}
         >
           Grow, Track & <span className="text-green-500">Love</span> Your Plants
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-green-800/70 max-w-xl leading-relaxed">
-          Plantora helps you manage your indoor plant collection — track care
+          Plantora helps you manage your indoor plant collection track care
           schedules, discover new plants, and keep your green space thriving.
         </p>
 
