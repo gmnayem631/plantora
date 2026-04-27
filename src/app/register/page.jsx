@@ -68,7 +68,7 @@ const Register = () => {
           {/* Google Button */}
           <button
             onClick={handleGoogle}
-            className="w-full flex items-center justify-center gap-3 border border-green-200 rounded-full py-3 text-sm font-medium text-green-900 hover:bg-green-50 transition-colors duration-200"
+            className="w-full flex items-center justify-center gap-3 border border-green-200 rounded-full py-3 text-sm font-medium cursor-pointer text-green-900 hover:bg-green-50 transition-colors duration-200"
           >
             <FcGoogle size={20} />
             Continue with Google
@@ -117,7 +117,7 @@ const Register = () => {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-500 text-white text-sm font-semibold py-3 rounded-full transition-colors duration-200 mt-1"
+              className="w-full bg-green-600 hover:bg-green-500 text-white text-sm font-semibold py-3 rounded-full cursor-pointer transition-colors duration-200 mt-1"
             >
               Create Account
             </button>
@@ -130,7 +130,7 @@ const Register = () => {
               href="/login"
               className="text-green-600 font-semibold hover:text-green-500 transition-colors duration-200"
             >
-              Sign In
+              Login
             </Link>
           </p>
         </div>

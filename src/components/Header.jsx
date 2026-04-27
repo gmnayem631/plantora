@@ -5,15 +5,22 @@ import Link from "next/link";
 import { useState } from "react";
 import logo from "../../public/logo.png";
 import Image from "next/image";
+import { useAuth } from "../../context/AuthContext";
+import { FiChevronDown, FiUser } from "react-icons/fi";
+import { TbPlant } from "react-icons/tb";
+import { LuLeaf } from "react-icons/lu";
+import { MdOutlineLogout } from "react-icons/md";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const { user, logout } = useAuth();
 
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Plants", href: "/plants" },
     { label: "About", href: "/about" },
-    { label: "My Plants", href: "/dashboard/manage" },
   ];
 
   return (
@@ -44,26 +51,98 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Auth Buttons - Desktop */}
+        {/* Desktop — Auth area */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/login"
-            className="text-sm font-medium text-green-700 hover:text-green-500 transition-colors duration-200"
-          >
-            Login
-          </Link>
-          <Link
-            href="/login"
-            className="text-sm font-medium bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full transition-colors duration-200"
-          >
-            Register
-          </Link>
+          {user ? (
+            // — LOGGED IN: show user dropdown —
+            <div className="relative">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-2 border border-green-200 rounded-full px-3 py-2 hover:bg-green-50 transition-colors duration-200"
+              >
+                <FiUser size={16} className="text-green-600" />
+                {/* Show the part of the email before the @ sign */}
+                <span className="text-sm font-medium text-green-800 max-w-32 truncate">
+                  {user.displayName || user.email.split("@")[0]}
+                </span>
+                <FiChevronDown
+                  size={14}
+                  className={`text-green-500 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {/* Dropdown Menu */}
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-56 bg-white border border-green-100 rounded-2xl shadow-lg overflow-hidden z-50">
+                  {/* User info */}
+                  <div className="px-4 py-3 border-b border-green-100">
+                    <p className="text-xs text-green-500 font-medium">
+                      Signed in as
+                    </p>
+                    <p className="text-sm font-semibold text-green-900 truncate mt-0.5">
+                      {user.email}
+                    </p>
+                  </div>
+
+                  {/* Dropdown Links */}
+                  <div className="py-2">
+                    <Link
+                      href="/plants/add-plant"
+                      onClick={() => setDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700 transition-colors duration-150"
+                    >
+                      <LuLeaf size={16} className="text-green-400" />
+                      Add Plant
+                    </Link>
+                    <Link
+                      href="/plants/manage"
+                      onClick={() => setDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700 transition-colors duration-150"
+                    >
+                      <TbPlant size={16} className="text-green-400" />
+                      Manage Plants
+                    </Link>
+                  </div>
+
+                  {/* Logout */}
+                  <div className="border-t border-green-100 py-2">
+                    <button
+                      onClick={() => {
+                        logout();
+                        setDropdownOpen(false);
+                      }}
+                      className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 transition-colors duration-150"
+                    >
+                      <MdOutlineLogout size={16} />
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            // — NOT LOGGED IN: show login/register —
+            <>
+              <Link
+                href="/login"
+                className="text-sm font-medium text-green-700 hover:text-green-500 transition-colors duration-200"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="text-sm font-medium bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full transition-colors duration-200"
+              >
+                Register
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Hamburger - Mobile */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-1 group"
+          className="md:hidden flex flex-col gap-1.5 p-1"
           aria-label="Toggle menu"
         >
           <span
@@ -93,20 +172,53 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <div className="flex gap-3 pt-2">
-            <Link
-              href="/login"
-              className="text-sm font-medium text-green-700 hover:text-green-500 transition-colors duration-200"
-            >
-              Login
-            </Link>
-            <Link
-              href="/login"
-              className="text-sm font-medium bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full transition-colors duration-200"
-            >
-              Register
-            </Link>
-          </div>
+
+          {/* Mobile — Auth area */}
+          {user ? (
+            <>
+              <p className="text-xs text-green-500 font-medium pt-2 border-t border-green-100">
+                {user.email}
+              </p>
+              <Link
+                href="/plants/add"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm font-medium text-gray-600 hover:text-green-600"
+              >
+                Add Plant
+              </Link>
+              <Link
+                href="/plants/manage"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm font-medium text-gray-600 hover:text-green-600"
+              >
+                Manage Plants
+              </Link>
+              <button
+                onClick={() => {
+                  logout();
+                  setMenuOpen(false);
+                }}
+                className="text-sm font-medium text-red-500 hover:text-red-400 text-left"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <div className="flex gap-3 pt-2">
+              <Link
+                href="/login"
+                className="text-sm font-medium text-green-700 hover:text-green-500"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="text-sm font-medium bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full"
+              >
+                Register
+              </Link>
+            </div>
+          )}
         </nav>
       </div>
     </header>
