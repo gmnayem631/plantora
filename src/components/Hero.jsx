@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="min-h-[90vh] flex items-center justify-center px-6"
+      className="min-h-[70vh] flex items-center justify-center px-6 py-6"
       style={{
         background:
           "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 40%, #f7fee7 100%)",
@@ -48,13 +48,13 @@ const Hero = () => {
 
         {/* Decorative floating leaves */}
         <div className="relative w-full mt-8 select-none pointer-events-none">
-          <span className="absolute left-0 -top-4 text-5xl opacity-20 rotate-12">
+          <span className="absolute left-0 -top-56 text-5xl opacity-20 rotate-12">
             🌿
           </span>
-          <span className="absolute right-0 -top-4 text-5xl opacity-20 -rotate-12">
+          <span className="absolute right-0 -top-80 text-5xl opacity-20 -rotate-12">
             🍃
           </span>
-          <span className="absolute left-1/4 top-0 text-3xl opacity-10 rotate-45">
+          <span className="absolute left-1/4 -top-36 text-3xl opacity-10 rotate-45">
             🌱
           </span>
         </div>

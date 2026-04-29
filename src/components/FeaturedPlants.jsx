@@ -6,7 +6,7 @@ const FeaturedPlants = () => {
   const featured = plants.slice(0, 4);
 
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-10 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
