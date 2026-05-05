@@ -40,7 +40,7 @@ const PlantOfTheWeek = () => {
           {/* Content */}
           <div className="flex flex-col gap-5 p-8 md:p-12 md:w-1/2">
             <div className="flex items-center gap-3">
-              <span className="text-xs font-semibold px-3 py-1 bg-green-100 text-green-700 rounded-full">
+              <span className="text-xs font-semibold px-3 py-1 bg-green-100 text-green-900 rounded-full">
                 {plant.type}
               </span>
               <span className="text-xs font-semibold px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full">
@@ -57,7 +57,7 @@ const PlantOfTheWeek = () => {
 
             <p className="text-gray-500 leading-relaxed">{plant.description}</p>
 
-            <div className="flex items-center gap-2 text-sm text-green-700">
+            <div className="flex items-center gap-2 text-sm text-green-900">
               <span>
                 <FaTint />
               </span>

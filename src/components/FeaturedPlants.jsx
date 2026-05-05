@@ -50,7 +50,7 @@ const FeaturedPlants = () => {
                   <span
                     className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                       plant.careLevel === "Easy"
-                        ? "bg-green-100 text-green-700"
+                        ? "bg-green-100 text-green-900"
                         : plant.careLevel === "Medium"
                           ? "bg-yellow-100 text-yellow-700"
                           : "bg-red-100 text-red-700"
@@ -77,7 +77,7 @@ const FeaturedPlants = () => {
         <div className="text-center mt-12">
           <Link
             href="/plants"
-            className="inline-block px-8 py-3 border border-green-400 text-green-700 hover:bg-green-600 hover:text-white text-sm font-semibold rounded-full transition-all duration-200"
+            className="inline-block px-8 py-3 border border-green-400 text-green-900 hover:bg-green-600 hover:text-white text-sm font-semibold rounded-full transition-all duration-200"
           >
             View All Plants
           </Link>

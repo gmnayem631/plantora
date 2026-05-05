@@ -5,7 +5,7 @@ import { MdOutlineWaterDrop } from "react-icons/md";
 const tips = {
   Easy: {
     color: "bg-green-50 border-green-200",
-    badge: "bg-green-100 text-green-700",
+    badge: "bg-green-100 text-green-900",
     icon: <LuLeaf size={20} className="text-green-500" />,
     plants: [
       "Snake Plant",
@@ -164,14 +164,14 @@ const CareGuide = () => {
 
               {/* Plants in this level */}
               <div>
-                <p className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-3">
+                <p className="text-xs font-semibold text-green-900 uppercase tracking-wide mb-3">
                   Plants in this category
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {data.plants.map((plant) => (
                     <span
                       key={plant}
-                      className="text-xs bg-white/70 border border-green-200 text-green-700 px-3 py-1 rounded-full"
+                      className="text-xs bg-white/70 border border-green-200 text-green-900 px-3 py-1 rounded-full"
                     >
                       {plant}
                     </span>

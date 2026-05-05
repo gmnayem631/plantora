@@ -73,7 +73,7 @@ const ManagePlants = () => {
                       <span
                         className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                           plant.careLevel === "Easy"
-                            ? "bg-green-100 text-green-700"
+                            ? "bg-green-100 text-green-900"
                             : plant.careLevel === "Medium"
                               ? "bg-yellow-100 text-yellow-700"
                               : "bg-red-100 text-red-700"
@@ -104,7 +104,7 @@ const ManagePlants = () => {
                   <div className="px-4 pb-4 flex gap-2">
                     <Link
                       href={`/plants/${plant.id}`}
-                      className="flex-1 text-center text-xs font-semibold text-green-700 border border-green-200 hover:bg-green-50 px-3 py-2 rounded-full transition-colors duration-200"
+                      className="flex-1 text-center text-xs font-semibold text-green-900 border border-green-200 hover:bg-green-50 px-3 py-2 rounded-full transition-colors duration-200"
                     >
                       View
                     </Link>

@@ -47,7 +47,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             {/* Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-green-700 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-green-900 uppercase tracking-wide">
                 Your Name
               </label>
               <div className="flex items-center gap-3 border border-green-200 rounded-2xl px-4 py-3 focus-within:border-green-400 transition-colors duration-200">
@@ -63,7 +63,7 @@ const Contact = () => {
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-green-700 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-green-900 uppercase tracking-wide">
                 Email Address
               </label>
               <div className="flex items-center gap-3 border border-green-200 rounded-2xl px-4 py-3 focus-within:border-green-400 transition-colors duration-200">
@@ -79,7 +79,7 @@ const Contact = () => {
 
             {/* Message */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-green-700 uppercase tracking-wide">
+              <label className="text-xs font-semibold text-green-900 uppercase tracking-wide">
                 Message
               </label>
               <div className="flex items-start gap-3 border border-green-200 rounded-2xl px-4 py-3 focus-within:border-green-400 transition-colors duration-200">

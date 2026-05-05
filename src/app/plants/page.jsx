@@ -130,7 +130,7 @@ const Items = () => {
                 setSelectedCare("All");
                 setSelectedType("All");
               }}
-              className="mt-2 text-sm font-medium text-green-600 hover:text-green-500 border border-green-300 px-5 py-2 cursor-pointer rounded-full transition-colors duration-200"
+              className="mt-2 text-sm font-medium text-green-600 hover:text-(--primary-hover) border border-green-300 px-5 py-2 cursor-pointer rounded-full transition-colors duration-200"
             >
               Clear Filters
             </button>

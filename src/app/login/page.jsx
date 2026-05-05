@@ -136,7 +136,7 @@ const Login = () => {
             {isLogin ? "Don't have an account? " : "Already have an account? "}
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-green-600 font-semibold cursor-pointer hover:text-green-500 transition-colors duration-200"
+              className="text-green-600 font-semibold cursor-pointer hover:text-(--primary-hover) transition-colors duration-200"
             >
               {isLogin ? "Register" : "Sign In"}
             </button>
@@ -147,7 +147,7 @@ const Login = () => {
         <p className="text-center text-xs text-green-600 mt-6">
           <Link
             href="/"
-            className="hover:text-green-500 transition-colors duration-200"
+            className="hover:text-(--primary-hover) transition-colors duration-200"
           >
             ← Back to Home
           </Link>

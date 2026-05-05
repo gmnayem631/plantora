@@ -128,7 +128,7 @@ const Register = () => {
             Already have an account?{" "}
             <Link
               href="/login"
-              className="text-green-600 font-semibold hover:text-green-500 transition-colors duration-200"
+              className="text-green-600 font-semibold hover:text-(--primary-hover) transition-colors duration-200"
             >
               Login
             </Link>
@@ -139,7 +139,7 @@ const Register = () => {
         <p className="text-center text-xs text-green-600 mt-6">
           <Link
             href="/"
-            className="hover:text-green-500 transition-colors duration-200"
+            className="hover:text-(--primary-hover) transition-colors duration-200"
           >
             ← Back to Home
           </Link>

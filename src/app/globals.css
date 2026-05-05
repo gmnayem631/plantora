@@ -1,9 +1,40 @@
 @import "tailwindcss";
 
 :root {
+  --font-serif: Georgia, serif;
   --background: #ffffff;
   --foreground: #171717;
-  --font-serif: Georgia, serif;
+
+  /* Surfaces */
+  --card: #ffffff;
+  --card-muted: #f9fafb;
+
+  /* Borders */
+  --border: #e5e7eb;
+  --border-light: #dcfce7;
+
+  /* Text */
+  --text-primary: #14532d; /* green-900 */
+  --text-secondary: #4b5563; /* gray-600 */
+  --text-muted: #9ca3af; /* gray-400 */
+
+  /* Brand (green) */
+  --primary: #16a34a; /* green-600 */
+  --primary-hover: #22c55e; /* green-500 */
+  --primary-soft: #dcfce7; /* green-100 */
+
+  /* Accents */
+  --accent-yellow: #fef9c3;
+  --accent-red: #fee2e2;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #f0fdf4 0%,
+    #dcfce7 40%,
+    #f7fee7 100%
+  );
+  --gradient-section: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%);
 }
 
 @theme inline {
@@ -13,12 +44,35 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --card: #111827;
+  --card-muted: #1f2937;
+
+  --border: #374151;
+  --border-light: #1f2937;
+
+  --text-primary: #f0fdf4;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+
+  --primary: #22c55e;
+  --primary-hover: #4ade80;
+  --primary-soft: #052e16;
+
+  --accent-yellow: #422006;
+  --accent-red: #450a0a;
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #052e16 0%,
+    #064e3b 40%,
+    #022c22 100%
+  );
+  --gradient-section: linear-gradient(180deg, #052e16 0%, #0a0a0a 40%);
+}
 
 body {
   background: var(--background);

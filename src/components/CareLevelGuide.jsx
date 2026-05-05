@@ -5,7 +5,7 @@ const levels = [
     level: "Easy",
     emoji: <FaSmile />,
     color: "bg-green-50 border-green-200",
-    badge: "bg-green-100 text-green-700",
+    badge: "bg-green-100 text-green-900",
     title: "Perfect for Beginners",
     description:
       "These plants tolerate neglect, irregular watering, and low light. Great for busy lifestyles.",
@@ -82,7 +82,7 @@ const CareLevelGuide = () => {
                 {l.examples.map((ex) => (
                   <li
                     key={ex}
-                    className="text-xs bg-white/70 border border-green-200 text-green-700 px-3 py-1 rounded-full"
+                    className="text-xs bg-white/70 border border-green-200 text-green-900 px-3 py-1 rounded-full"
                   >
                     {ex}
                   </li>
