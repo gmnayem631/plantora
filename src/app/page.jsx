@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import PlantOfTheWeek from "@/components/PlantOfTheWeek";
 import PlantStats from "@/components/PlantStats";
+import Testimonials from "@/components/Testomonials";
 import WhyPlantora from "@/components/WhyPlantora";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyPlantora></WhyPlantora>
       <CareLevelGuide></CareLevelGuide>
       <PlantStats></PlantStats>
+      <Testimonials></Testimonials>
       <PlantOfTheWeek></PlantOfTheWeek>
       <Newsletter></Newsletter>
     </section>

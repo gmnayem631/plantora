@@ -11,10 +11,8 @@ const Newsletter = () => {
       toast.error("Please enter a valid email address.");
       return;
     }
-
-    // TODO: wire up to your email service here
     setEmail("");
-    toast.success("You're in! Welcome to the Plantora family. 🌿");
+    toast.success("Welcome to the Plantora family.");
   }
 
   function handleKeyDown(e) {
