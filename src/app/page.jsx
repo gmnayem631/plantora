@@ -3,6 +3,7 @@ import FeaturedPlants from "@/components/FeaturedPlants";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import PlantOfTheWeek from "@/components/PlantOfTheWeek";
+import PlantQuiz from "@/components/PlantQuiz";
 import PlantStats from "@/components/PlantStats";
 import Testimonials from "@/components/Testomonials";
 import WhyPlantora from "@/components/WhyPlantora";
@@ -17,6 +18,7 @@ export default function Home() {
       <PlantStats></PlantStats>
       <Testimonials></Testimonials>
       <PlantOfTheWeek></PlantOfTheWeek>
+      <PlantQuiz></PlantQuiz>
       <Newsletter></Newsletter>
     </section>
   );
